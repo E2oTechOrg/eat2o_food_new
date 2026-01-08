@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>India's No 1 Homemade Food</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .page-header {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            /* desktop height */
+            display: flex;
+            align-items: center;
+            background-image: url("img/bg-service.webp");
+            /* banner image */
+            background-size: cover;
+            /* 🔥 prevents breaking */
+            background-position: right center;
+            /* keeps food on right */
+            background-repeat: no-repeat;
+
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                background-position: 80% center;
+                /* shifts focus to food */
+                min-height: 300px;
+            }
+        }
+
+        .service-content p {
+            color: gray;
+        }
+
+        @media (max-width: 500px) {
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                /* stack buttons */
+                align-items: center;
+                /* center horizontally */
+            }
+
+            .button-container .btn {
+                width: 90%;
+                /* optional – nice mobile look */
+                max-width: 320px;
+                text-align: center;
+            }
+        }
+
+        .nutrition-img img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .nut-head {
+            border: none;
+            border-bottom: 3px solid red;
+            display: inline-block;
+            padding-bottom: 10px;
+
+
+        }
+
+        .dropdown-item {
+            font-weight: 500;
+
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #f7e6dc;
+            /* highlight */
+            color: #000;
+        }
+
+        /* Popup Wrapper */
+        .popup-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .popup-image {
+            height: 100%;
+        }
+
+        .popup-image img {
+            display: block;
+            /* removes bottom gap */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* fills container */
+        }
+
+
+        /* Form Inputs */
+        .popup-form .form-control,
+        .popup-form .form-select {
+            border: 1.5px solid #6fb04b;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        /* Close Button */
+        .popup-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .popup-form {
+                padding: 30px !important;
+            }
+        }
+
+        .custom-modal {
+            max-width: 720px;
+            /* medium size */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-body ms-3" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body ms-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-body ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-body ms-3" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="fw-bold text-primary m-0">Eat<span class="text-secondary">2</span>O</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link fw-bold ">Home</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Who We Are?</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="testimonial.html" class="dropdown-item">Customer Reviews</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold active"
+                            data-bs-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">All Services</a>
+                            <a href="Nutritionfood.html" class="dropdown-item">Nutritional Food Delivery</a>
+                            <a href="catering.html" class="dropdown-item">Catering Services</a>
+                        </div>
+                    </div>
+                    <a href="product.html" class="nav-item nav-link fw-bold ">Products</a>
+                    <a href="blog.html" class="nav-item nav-link fw-bold">Blog</a>
+                    <a href="contact.html" class="nav-item nav-link fw-bold">Contact Us</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-search text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-user text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-shopping-bag text-body"></small>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">Nutritional Food Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="text-body" href="service.html">Service</a></li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">Nutritional Food Delivery</li>
+                </ol>
+            </nav>
+
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- nutritional food content -->
+    <div class="container-xxl  nutrition-head mb-5">
+        <h1 class="nut-head fw-bold">Madurai’s #1 Nutritional Food Delivery Services</h1>
+        <p>Order fresh, healthy homemade Tamil food prepared daily using traditional recipes. Hygienic, tasty, and
+            delivered hot to your doorstep.</p>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <div class="col-lg-6 order-last order-lg-first wow fadeIn " data-wow-delay="0.5s">
+                    <h2 class="mb-4">Nutritional Food for a Healthy Everyday Lifestyle</h2>
+                    <p class="lead mb-4">Nutritional food is essential for maintaining physical health, mental clarity,
+                        and sustained energy throughout the day. Meals prepared using fresh vegetables, whole grains,
+                        lentils, and natural spices provide the body with essential vitamins, minerals, and proteins
+                        needed for daily activities. When food is cooked fresh and consumed on time, it supports better
+                        digestion and overall wellness..</p>
+                    <p class="lead mb-4">At Foody, we prioritize using fresh, high-quality ingredients to prepare meals
+                        that are not only delicious but also nutritionally balanced. Our menu is designed to cater to
+                        various dietary needs, ensuring that every meal contributes positively to your health and
+                        well-being. By choosing our nutritional food delivery service, you can enjoy the convenience of
+                        healthy eating without compromising on taste or quality.</p>
+                    <h2 class="mb-4">Importance of Balanced Homemade Nutrition</h2>
+                    <p class="lead mb-4">A balanced meal includes the right proportion of carbohydrates, proteins,
+                        healthy fats, and fiber. Traditional homemade Tamil food naturally follows this balance by
+                        combining rice, vegetables, legumes, and mild spices. Such meals help regulate metabolism,
+                        support gut health, and prevent fatigue caused by overly processed or oil-heavy foods.
+                        Home-style cooking also ensures controlled portions and consistent nutritional value.
+                    <p>
+                    <p class="lead mb-4">Balanced homemade nutrition helps the body receive essential nutrients in the
+                        right proportions without overprocessing or excess additives. Meals prepared at home allow
+                        better control over ingredients, cooking methods, and portion sizes, which supports consistent
+                        nutritional intake. When carbohydrates, proteins, healthy fats, and fiber are included naturally
+                        in everyday meals, it contributes to stable energy levels, improved digestion, and overall
+                        physical well-being. Regular consumption of balanced homemade food also supports long-term
+                        health by promoting sustainable eating habits and nutritional consistency.</p>
+                </div>
+                <div class="col-lg-6 order-first order-lg-last wow fadeIn " data-wow-delay="0.1s">
+                    <div class="nutrition-img ">
+                        <img class="img-fluid w-100 rounded-3" src="img/nut.webp" alt="Nutritional Food Image">
+                    </div>
+                    <div class="quotes">
+                        <blockquote class="blockquote mt-4">
+                            <p class="mb-0">“A nutritious meal provides the body with essential nutrients needed to
+                                function, heal, and grow. Fresh vegetables, whole grains, and home-style cooking methods
+                                help preserve natural goodness, making food a powerful contributor to daily health and
+                                vitality.”</p>
+                        </blockquote>
+                        <blockquote class="blockquote mt-4">
+                            <p class="mb-0">“Home-cooked nutritional food carries more than taste—it carries balance,
+                                care, and nourishment. Meals prepared fresh each day with natural ingredients help
+                                maintain strength, support digestion, and encourage healthier eating habits over time.”
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Popup Modal -->
+    <div class="modal fade" id="foodPopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal">
+
+            <div class="modal-content popup-wrapper">
+
+                <!-- Close Button -->
+                <button type="button" class="btn-close popup-close" data-bs-dismiss="modal"></button>
+
+                <div class="row g-0">
+
+                    <!-- LEFT IMAGE -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="popup-image">
+                            <img src="img/popup-image.webp" alt="Home Made Food">
+                        </div>
+                    </div>
+
+                    <!-- RIGHT FORM -->
+                    <div class="col-lg-6 col-12 p-5 popup-form">
+                        <form>
+                            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                            <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
+                            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+
+                            <select class="form-select mb-4">
+                                <option selected>Select Your Area</option>
+                                <option>Madurai East</option>
+                                <option>Madurai West</option>
+                                <option>KK Nagar</option>
+                                <option>Anna Nagar</option>
+                            </select>
+
+                            <button type="submit" class="btn btn-success w-100 py-3 fw-bold">
+                                SEND YOUR DETAILS
+                            </button>
+
+                            <p class="text-center mt-3 text-muted small">
+                                We never share your data
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
+                    <p>From our kitchen to your plate – fresh, healthy, and made with love.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nutritional food content -->
+
+
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            var popup = new bootstrap.Modal(document.getElementById("foodPopup"));
+            setTimeout(() => popup.show(), 3000);
+
+        });
+    </script>
+
+</body>
+
+</html>
