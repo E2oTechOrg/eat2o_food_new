@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,52 +31,61 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-          .page-header {
-  position: relative;
-  width: 100%;
-  min-height: 420px;               /* desktop height */
-  display: flex;
-  align-items: center;
+        .page-header {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            /* desktop height */
+            display: flex;
+            align-items: center;
 
-background-image: url("img/20613.webp"); /* banner image */
-  background-size: cover;          /* 🔥 prevents breaking */
-  background-position: right center; /* keeps food on right */
-  background-repeat: no-repeat;
-  
-}
+            background-image: url("img/20613.webp");
+            /* banner image */
+            background-size: cover;
+            /* 🔥 prevents breaking */
+            background-position: right center;
+            /* keeps food on right */
+            background-repeat: no-repeat;
 
-@media (max-width: 768px) {
-  .page-header {
-    background-position: 80% center; /* shifts focus to food */
-    min-height: 300px;
-  }
-}
-        .blog .img-fluid{
-    height: 300px;
-    object-fit: cover;
-}
-.dropdown-item {
-  font-weight: 500;
- 
-  padding: 12px 20px;
-  color: #333;
-}
+        }
 
-.dropdown-item:hover,
-.dropdown-item:focus {
-  background-color: #f7e6dc;   /* highlight */
-  color: #000;
-}
-.subtitles{
-    border:none;
-    border-bottom: 2px solid red;
-    display:inline-block;
-}
+        @media (max-width: 768px) {
+            .page-header {
+                background-position: 80% center;
+                /* shifts focus to food */
+                min-height: 300px;
+            }
+        }
+
+        .blog .img-fluid {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .dropdown-item {
+            font-weight: 500;
+
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #f7e6dc;
+            /* highlight */
+            color: #000;
+        }
+
+        .subtitles {
+            border: none;
+            border-bottom: 2px solid red;
+            display: inline-block;
+        }
     </style>
 </head>
 
 <body>
-   
+
 
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
@@ -97,19 +107,28 @@ background-image: url("img/20613.webp"); /* banner image */
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
                 <h1 class="fw-bold text-primary m-0">F<span class="text-secondary">oo</span>dy</h1>
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link fw-bold ">Home</a>
 
-                      <div class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Who We Are?</a>
                         <div class="dropdown-menu m-0">
                             <a href="about.html" class="dropdown-item">About Us</a>
                             <a href="feature.html" class="dropdown-item">Our Features</a>
                             <a href="testimonial.html" class="dropdown-item">Customer Reviews</a>
+                        </div>
+                    </div>
+                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Pricing</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="breakfast.html" class="dropdown-item">Break Fast Foods</a>
+                            <a href="lunch.html" class="dropdown-item">Lunch box Foods</a>
+                            <a href="dinner.html" class="dropdown-item">Dinner Foods</a>
+                            <a href="fullday.html" class="dropdown-item">Full Day Foods</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -144,72 +163,92 @@ background-image: url("img/20613.webp"); /* banner image */
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
             <h1 class="display-3 mb-3 animated slideInDown">Perfect Home-Made Meals for Busy Working Professionals</h1>
-           
+
         </div>
     </div>
     <!-- Page Header End -->
 
-     <!-- blog image and contents -->
-       <div class="container-xxl py-5">
+    <!-- blog image and contents -->
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-start">
                 <div class="col-lg-6 order-last order-lg-first wow fadeIn " data-wow-delay="0.5">
                     <h2 class="mb-4 fw-bold ">Importance of Healthy Home-Made Lunch in Daily Life</h2>
-                    <p class="lead ">Fresh vegetables are essential in home-made food as they provide natural nutrients, freshness, and authentic taste. They are rich in vitamins, minerals, and fiber that support digestion and boost immunity. Using fresh vegetables helps avoid harmful preservatives and excess chemicals found in processed foods. They also enhance the color, aroma, and texture of dishes, making meals more enjoyable. Cooking with fresh, seasonal vegetables ensures better nutrition, improved health, and balanced daily meals, making home-made food healthier, safer, and more satisfying for the entire family.<p>
-                     
+                    <p class="lead ">Fresh vegetables are essential in home-made food as they provide natural nutrients,
+                        freshness, and authentic taste. They are rich in vitamins, minerals, and fiber that support
+                        digestion and boost immunity. Using fresh vegetables helps avoid harmful preservatives and
+                        excess chemicals found in processed foods. They also enhance the color, aroma, and texture of
+                        dishes, making meals more enjoyable. Cooking with fresh, seasonal vegetables ensures better
+                        nutrition, improved health, and balanced daily meals, making home-made food healthier, safer,
+                        and more satisfying for the entire family.
+                    <p>
+
                 </div>
                 <div class="col-lg-6 order-first order-lg-last wow fadeIn " data-wow-delay="0.1s">
                     <div class="nutrition-img ">
                         <img class="img-fluid w-100 rounded-3" src="img/blog4.webp">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
     <div class="container-xxl py-3">
         <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2 >Common Fresh Vegetables We Use Daily</h2>
+            <div class="subtitles mb-4">
+                <h2>Common Fresh Vegetables We Use Daily</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">In our daily cooking, we commonly use vegetables like tomatoes, onions, potatoes,
+                    carrots, beans, cabbage, cauliflower, brinjal, and drumstick. These vegetables are versatile and
+                    form the base of many home-style dishes such as curries, gravies, stir-fries, and rice-based meals.
+                    They add flavor, texture, and nutrition to regular meals.</p>
+            </div>
         </div>
-        <div class="subpara">
-            <p class="lead">In our daily cooking, we commonly use vegetables like tomatoes, onions, potatoes, carrots, beans, cabbage, cauliflower, brinjal, and drumstick. These vegetables are versatile and form the base of many home-style dishes such as curries, gravies, stir-fries, and rice-based meals. They add flavor, texture, and nutrition to regular meals.</p>
+
+        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="subtitles mb-4">
+                <h2>Benefits of Using Seasonal Vegetables</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">Seasonal vegetables are always preferred in our home-made food. They are naturally
+                    grown, more nutritious, and fresher compared to off-season produce. Seasonal vegetables also taste
+                    better and are more affordable. Using them supports local farmers and helps maintain a sustainable
+                    and eco-friendly food habit.</p>
+            </div>
         </div>
+
+        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="subtitles mb-4">
+                <h2>Cleaning and Preparing Vegetables the Right Way</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">Proper cleaning and preparation of vegetables are essential for healthy cooking. We wash
+                    vegetables thoroughly in clean water to remove dirt and residues. Cutting vegetables just before
+                    cooking helps retain their nutrients and natural color. Simple preparation methods ensure that the
+                    vegetables remain fresh and healthy in every dish.</p>
+            </div>
+        </div>
+
+        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="subtitles mb-4">
+                <h2>How Fresh Vegetables Improve Overall Health</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">Including fresh vegetables in daily meals improves digestion, boosts immunity, and
+                    supports overall well-being. They help reduce the risk of lifestyle-related diseases and provide
+                    long-lasting energy. Home-made food prepared with fresh vegetables is light, nourishing, and
+                    suitable for all age groups.
+
+                    Fresh vegetables are the foundation of wholesome home-made food, making every meal nutritious,
+                    delicious, and made with care..</p>
+            </div>
+        </div>
+
     </div>
 
-     <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2>Benefits of Using Seasonal Vegetables</h2>
-        </div>
-        <div class="subpara">
-            <p class="lead">Seasonal vegetables are always preferred in our home-made food. They are naturally grown, more nutritious, and fresher compared to off-season produce. Seasonal vegetables also taste better and are more affordable. Using them supports local farmers and helps maintain a sustainable and eco-friendly food habit.</p>
-        </div>
-    </div>
-
-     <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2>Cleaning and Preparing Vegetables the Right Way</h2>
-        </div>
-        <div class="subpara">
-            <p class="lead">Proper cleaning and preparation of vegetables are essential for healthy cooking. We wash vegetables thoroughly in clean water to remove dirt and residues. Cutting vegetables just before cooking helps retain their nutrients and natural color. Simple preparation methods ensure that the vegetables remain fresh and healthy in every dish.</p>
-        </div>
-    </div>
-
-    <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2>How Fresh Vegetables Improve Overall Health</h2>
-        </div>
-        <div class="subpara">
-            <p class="lead">Including fresh vegetables in daily meals improves digestion, boosts immunity, and supports overall well-being. They help reduce the risk of lifestyle-related diseases and provide long-lasting energy. Home-made food prepared with fresh vegetables is light, nourishing, and suitable for all age groups.
-
-Fresh vegetables are the foundation of wholesome home-made food, making every meal nutritious, delicious, and made with care..</p>
-        </div>
-    </div>
-        
-    </div>
 
 
-  
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -217,12 +256,17 @@ Fresh vegetables are the foundation of wholesome home-made food, making every me
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                        stet lorem sit clita</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -243,8 +287,10 @@ Fresh vegetables are the foundation of wholesome home-made food, making every me
                     <h4 class="text-light mb-4">Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
                 </div>
             </div>
@@ -268,7 +314,8 @@ Fresh vegetables are the foundation of wholesome home-made food, making every me
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

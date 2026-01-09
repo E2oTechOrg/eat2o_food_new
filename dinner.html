@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Foody - Organic Food Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .page-header {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            /* desktop height */
+            display: flex;
+            align-items: center;
+
+            background-image: url("img/pricing-bg.webp");
+            /* banner image */
+            background-size: cover;
+            /* 🔥 prevents breaking */
+            background-position: right center;
+            /* keeps food on right */
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                background-position: 80% center;
+                /* shifts focus to food */
+                min-height: 300px;
+            }
+        }
+
+        .dropdown-item {
+            font-weight: 500;
+
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #f7e6dc;
+            /* highlight */
+            color: #000;
+        }
+
+        /* Popup Wrapper */
+        .popup-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .popup-image {
+            height: 100%;
+        }
+
+        .popup-image img {
+            display: block;
+            /* removes bottom gap */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* fills container */
+        }
+
+
+        /* Form Inputs */
+        .popup-form .form-control,
+        .popup-form .form-select {
+            border: 1.5px solid #6fb04b;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        /* Close Button */
+        .popup-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .popup-form {
+                padding: 30px !important;
+            }
+        }
+
+        .custom-modal {
+            max-width: 720px;
+            /* medium size */
+        }
+
+        .title, .benefit-title {
+            border: none;
+            border-bottom: 3px solid red;
+            display: inline-block;
+        }
+
+        .col {
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        .plancard {
+            background: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            max-width: 450px;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .plancard:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;  /* makes image container square */
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* fills square without stretching */
+        }
+
+
+
+        .plancard h5 {
+            margin: 15px 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .plancard .btn {
+            margin: 10px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .plancard p {
+            font-size: 28px;
+            color: #555;
+
+        }
+
+        .rating {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-weight: 500;
+            color: #f4b400;
+        }
+
+        @media (max-width: 768px) {
+            .plancard {
+                margin-bottom: 25px;
+            }
+
+            .card-img {
+                height: 160px;
+            }
+
+            .plancard h2 {
+                font-size: 20px;
+            }
+
+            .plancard p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-body ms-3" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="text-body ms-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-body ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-body ms-3" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="fw-bold text-primary m-0">Eat<span class="text-secondary">2</span>O</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold " data-bs-toggle="dropdown">Who We
+                            Are?</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="feature.html" class="dropdown-item">Our Features</a>
+                            <a href="testimonial.html" class="dropdown-item">Customer Reviews</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold active"
+                            data-bs-toggle="dropdown">Pricing</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="breakfast.html" class="dropdown-item">Break Fast Foods</a>
+                            <a href="lunch.html" class="dropdown-item">Lunch box Foods</a>
+                            <a href="dinner.html" class="dropdown-item">Dinner Foods</a>
+                            <a href="fullday.html" class="dropdown-item">Full Day Foods</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">All Services</a>
+                            <a href="Nutritionfood.html" class="dropdown-item">Nutritional Food Delivery</a>
+                            <a href="catering.html" class="dropdown-item">Catering Services</a>
+                        </div>
+                    </div>
+                    <a href="product.html" class="nav-item nav-link fw-bold ">Products</a>
+                    <a href="blog.html" class="nav-item nav-link fw-bold">Blog</a>
+                    <a href="contact.html" class="nav-item nav-link fw-bold">Contact Us</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-search text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-user text-body"></small>
+                    </a>
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-shopping-bag text-body"></small>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">Dinner box food Subscription</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="text-body" href="#">Pricing</a></li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">Dinner box foods</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- breakfast content here -->
+    <div class="container mb-5">
+        <div class="title mb-4">
+            <h1 class="display-5 fw-bold">Dinner Box Subscription plans</h1>
+        </div>
+        <div class="para">
+            <p class=" lead mb-4">Choose a plan that suits your lifestyle and needs
+                and enjoy a delicious home-cooked Dinner meal every day. Our Dinner box subscription plans are designed to provide you with
+                healthy and tasty meals that are convenient and affordable.
+
+
+            </p>
+        </div>
+        <div class="benefits">
+            <div class="benefit-title">
+                 <h2 class="fw-bold">Benefits of Lunch Box Subscription</h2>
+            </div>
+           <ul class="list mt-3" style="list-style: none;">
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check  me-2 text-success"></i>Filling and comforting dinner options</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success" ></i>Chapati or roti with vegetable curry or sabzi</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success"></i>Rice-based dishes on selected days</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success"></i>Healthy, satisfying meals to end the day</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success"></i>Evening delivery scheduled on time</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="plancard mb-5 wow fadeInUp" data-wow-delay="0.1s"> 
+                    <div class="card-img">
+                        <img src="img/dinner.webp" alt="Basic Plan">
+                    </div>
+                    <h2 class="w-100 bg-success text-white p-3">Monthly With Sunday</h2>
+                    <p class="lead">₹3250/month</p>
+
+                    <button class="btn btn-primary  btn-lg"><i class="fas fa-utensils me-2"></i>Subscribe Now</button>
+                    <div class="rating w-100 fs-5">
+                        <span>Rating:⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="plancard mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card-img">
+                        <img src="img/dinner.webp" alt="Basic Plan">
+                    </div>
+                    <h2 class="w-100 bg-success text-white p-3">Weekly With Sunday</h2>
+                    <p class="lead">₹900/week</p>
+
+                    <button class="btn btn-primary btn-lg"><i class="fas fa-utensils me-2"></i>Subscribe Now</button>
+                    <div class="rating w-100 fs-5 ">
+                        <span>Rating:⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Form Popup Modal -->
+    <div class="modal fade" id="foodPopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal">
+
+            <div class="modal-content popup-wrapper">
+
+                <!-- Close Button -->
+                <button type="button" class="btn-close popup-close" data-bs-dismiss="modal"></button>
+
+                <div class="row g-0">
+
+                    <!-- LEFT IMAGE -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="popup-image">
+                            <img src="img/popup-image.webp" alt="Home Made Food">
+                        </div>
+                    </div>
+
+                    <!-- RIGHT FORM -->
+                    <div class="col-lg-6 col-12 p-5 popup-form">
+                        <form>
+                            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                            <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
+                            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+
+                            <select class="form-select mb-4">
+                                <option selected>Select Your Area</option>
+                                <option>Madurai East</option>
+                                <option>Madurai West</option>
+                                <option>KK Nagar</option>
+                                <option>Anna Nagar</option>
+                            </select>
+
+                            <button type="submit" class="btn btn-success w-100 py-3 fw-bold">
+                                SEND YOUR DETAILS
+                            </button>
+
+                            <p class="text-center mt-3 text-muted small">
+                                We never share your data
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
+                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                        stet lorem sit clita</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            var popup = new bootstrap.Modal(document.getElementById("foodPopup"));
+            setTimeout(() => popup.show(), 3000);
+
+        });
+    </script>
+</body>
+
+</html>

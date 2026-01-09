@@ -117,7 +117,7 @@
             /* medium size */
         }
 
-        .title {
+        .title, .benefit-title {
             border: none;
             border-bottom: 3px solid red;
             display: inline-block;
@@ -134,7 +134,7 @@
             border-radius: 18px;
             overflow: hidden;
             max-width: 450px;
-            max-height:500px;
+            max-height: 500px;
             width: 100%;
             height: 100%;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -151,15 +151,17 @@
 
         .card-img {
             width: 100%;
-            height: 350px;
+            aspect-ratio: 1 / 1;  /* makes image container square */
             overflow: hidden;
         }
 
         .card-img img {
             width: 100%;
             height: 100%;
-            object-fit: fill;
+            object-fit: cover; /* fills square without stretching */
         }
+
+
 
         .plancard h5 {
             margin: 15px 0;
@@ -173,8 +175,15 @@
             font-weight: 600;
         }
 
+        .plancard p {
+            font-size: 28px;
+            color: #555;
+
+        }
+
         .rating {
             margin-top: 5px;
+            margin-bottom: 10px;
             padding: 10px;
             font-weight: 500;
             color: #f4b400;
@@ -191,6 +200,10 @@
 
             .plancard h2 {
                 font-size: 20px;
+            }
+
+            .plancard p {
+                font-size: 18px;
             }
         }
     </style>
@@ -299,19 +312,31 @@
                 from a variety of options to suit your taste and dietary needs. Enjoy fresh, homemade meals delivered
                 right to your doorstep every morning.</p>
         </div>
+        <div class="benefits">
+            <div class="benefit-title">
+                 <h2 class="fw-bold">Benefits of Breakfast Subscription</h2>
+            </div>
+            <ul class="list mt-3" style="list-style: none;">
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check  me-2 text-success"></i>Freshly prepared breakfast every morning</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success" ></i>Variety of items like Idli, Dosa, Pongal, Chapati, Upma, or Poori</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success"></i>Served with healthy sides such as chutney and sambar</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success"></i>Light, nutritious, and home-style taste</li>
+                <li class="lead d-flex align-items-start mb-3"><i class="fas fa-check me-2 text-success"></i>Morning delivery at a fixed time for convenience</li>
+            </ul>
+        </div>
     </div>
 
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
             <div class="col">
-                <div class="plancard mb-5">
+                <div class="plancard mb-5 wow fadeInUp" data-wow-delay="0.1s"> 
                     <div class="card-img">
-                        <img src="img/blog8.webp" alt="Basic Plan">
+                        <img src="img/break.webp" alt="Basic Plan">
                     </div>
                     <h2 class="w-100 bg-success text-white p-3">Monthly With Sunday</h2>
                     <p class="lead">₹3000/month</p>
 
-                    <button class="btn btn-primary  btn-lg">Subscribe Now</button>
+                    <button class="btn btn-primary  btn-lg"><i class="fas fa-utensils me-2"></i>Subscribe Now</button>
                     <div class="rating w-100 fs-5">
                         <span>Rating:⭐⭐⭐⭐</span>
                     </div>
@@ -320,14 +345,14 @@
             </div>
 
             <div class="col">
-                <div class="plancard ">
+                <div class="plancard mb-5 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="card-img">
-                        <img src="img/blog8.webp" alt="Basic Plan">
+                        <img src="img/break.webp" alt="Basic Plan">
                     </div>
                     <h2 class="w-100 bg-success text-white p-3">Weekly With Sunday</h2>
                     <p class="lead">₹900/week</p>
 
-                    <button class="btn btn-primary btn-lg">Subscribe Now</button>
+                    <button class="btn btn-primary btn-lg"><i class="fas fa-utensils me-2"></i>Subscribe Now</button>
                     <div class="rating w-100 fs-5 ">
                         <span>Rating:⭐⭐⭐⭐⭐</span>
                     </div>
