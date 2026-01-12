@@ -39,7 +39,7 @@
             display: flex;
             align-items: center;
 
-            background-image: url("img/20613.webp");
+            background-image: url("img/terms-bg.webp");
             /* banner image */
             background-size: cover;
             /* 🔥 prevents breaking */
@@ -76,21 +76,47 @@
             color: #000;
         }
 
-        .subtitles {
+        .faq-header {
             border: none;
-            border-bottom: 2px solid red;
-            display: inline-block;
+            border-bottom: 2px solid #28a745;
+            display: inline-block
+        }
+
+        /* Remove hover background */
+        .accordion-button:hover {
+            background-color: transparent !important;
+        }
+
+        /* Remove focus & active background */
+        .accordion-button:focus,
+        .accordion-button:not(.collapsed) {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        /* Optional: keep text color consistent */
+        .accordion-button {
+            color: #000;
+        }
+
+        .accordion-button::after {
+            filter: none;
+        }
+
+        .accordion-item {
+            border: none;
         }
     </style>
 </head>
 
 <body>
-<!-- Spinner Start -->
+    <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
+
 
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
@@ -127,7 +153,7 @@
                             <a href="testimonial.html" class="dropdown-item">Customer Reviews</a>
                         </div>
                     </div>
-                     <div class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Pricing</a>
                         <div class="dropdown-menu m-0">
                             <a href="breakfast.html" class="dropdown-item">Break Fast Foods</a>
@@ -145,10 +171,10 @@
                         </div>
                     </div>
                     <a href="product.html" class="nav-item nav-link fw-bold ">Products</a>
-                    <a href="blog.html" class="nav-item nav-link fw-bold active">Blog</a>
+                    <a href="blog.html" class="nav-item nav-link fw-bold ">Blog</a>
                     <a href="contact.html" class="nav-item nav-link fw-bold">Contact Us</a>
                 </div>
-              
+
             </div>
         </nav>
     </div>
@@ -157,95 +183,156 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">Perfect Home-Made Meals for Busy Working Professionals</h1>
+            <h1 class="display-3 mb-3 animated slideInDown">Frequently Asked Question's</h1>
 
         </div>
     </div>
     <!-- Page Header End -->
 
-    <!-- blog image and contents -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-start">
                 <div class="col-lg-6 order-last order-lg-first wow fadeIn " data-wow-delay="0.5">
-                    <h2 class="mb-4 fw-bold ">Importance of Healthy Home-Made Lunch in Daily Life</h2>
-                    <p class="lead ">Fresh vegetables are essential in home-made food as they provide natural nutrients,
-                        freshness, and authentic taste. They are rich in vitamins, minerals, and fiber that support
-                        digestion and boost immunity. Using fresh vegetables helps avoid harmful preservatives and
-                        excess chemicals found in processed foods. They also enhance the color, aroma, and texture of
-                        dishes, making meals more enjoyable. Cooking with fresh, seasonal vegetables ensures better
-                        nutrition, improved health, and balanced daily meals, making home-made food healthier, safer,
-                        and more satisfying for the entire family.
-                    <p>
+                    <div class="faq-header mb-4">
+                        <h2>Common Questions About Our Services</h2>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <!-- faq1 -->
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header " id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    1. What kind of food do you deliver?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">We deliver freshly prepared home-made food cooked by home
+                                    chefs using quality ingredients. Our meals focus on taste, hygiene, and authentic
+                                    home-style cooking.</div>
+                            </div>
+                        </div>
+                        <!-- faq2 -->
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    2. How can I place an order?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">You can place an order directly through our website by
+                                    selecting your preferred dishes, choosing a delivery time, and completing payment
+                                    using available payment options.</div>
+                            </div>
+                        </div>
+                        <!-- faq3 -->
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    3. How fresh is the food?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">All meals are prepared on the same day of delivery to ensure
+                                    freshness and quality. We avoid storing cooked food and prepare it only after orders
+                                    are confirmed.</div>
+                            </div>
+                        </div>
+                        <!-- faq4 -->
+                        <div class="accordion-item mb-2 ">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    4. Do you offer daily or monthly meal plans?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Yes, we offer daily, weekly, and monthly meal plans, subject
+                                    to availability. Meal plan details are displayed on the website..</div>
+                            </div>
+                        </div>
+
+                        <!-- faq5 -->
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    5. What are your delivery timings?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Delivery timings depend on your location and order type. The
+                                    estimated delivery time will be shown at checkout.</div>
+                            </div>
+                        </div>
+
+                        <!-- faq6 -->
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                    aria-controls="flush-collapseSix">
+                                    6. What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">We accept secure online payments including UPI, debit cards,
+                                    credit cards, and net banking. Available options are shown during checkout.</div>
+                            </div>
+                        </div>
+
+                        <!-- faq7 -->
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                    aria-controls="flush-collapseSeven">
+                                    7. What if I receive a wrong or unsatisfactory order?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">If you receive an incorrect or unsatisfactory order, please
+                                    contact us immediately. We will assist you as per our delivery and return policy.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
 
                 </div>
                 <div class="col-lg-6 order-first order-lg-last wow fadeIn " data-wow-delay="0.1s">
                     <div class="nutrition-img ">
-                        <img class="img-fluid w-100 rounded-3" src="img/blog4.webp">
+                        <img class="img-fluid w-100 rounded-3" src="img/faq.webp">
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-xxl py-3">
-        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="subtitles mb-4">
-                <h2>Common Fresh Vegetables We Use Daily</h2>
-            </div>
-            <div class="subpara">
-                <p class="lead">In our daily cooking, we commonly use vegetables like tomatoes, onions, potatoes,
-                    carrots, beans, cabbage, cauliflower, brinjal, and drumstick. These vegetables are versatile and
-                    form the base of many home-style dishes such as curries, gravies, stir-fries, and rice-based meals.
-                    They add flavor, texture, and nutrition to regular meals.</p>
-            </div>
-        </div>
-
-        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="subtitles mb-4">
-                <h2>Benefits of Using Seasonal Vegetables</h2>
-            </div>
-            <div class="subpara">
-                <p class="lead">Seasonal vegetables are always preferred in our home-made food. They are naturally
-                    grown, more nutritious, and fresher compared to off-season produce. Seasonal vegetables also taste
-                    better and are more affordable. Using them supports local farmers and helps maintain a sustainable
-                    and eco-friendly food habit.</p>
-            </div>
-        </div>
-
-        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="subtitles mb-4">
-                <h2>Cleaning and Preparing Vegetables the Right Way</h2>
-            </div>
-            <div class="subpara">
-                <p class="lead">Proper cleaning and preparation of vegetables are essential for healthy cooking. We wash
-                    vegetables thoroughly in clean water to remove dirt and residues. Cutting vegetables just before
-                    cooking helps retain their nutrients and natural color. Simple preparation methods ensure that the
-                    vegetables remain fresh and healthy in every dish.</p>
-            </div>
-        </div>
-
-        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="subtitles mb-4">
-                <h2>How Fresh Vegetables Improve Overall Health</h2>
-            </div>
-            <div class="subpara">
-                <p class="lead">Including fresh vegetables in daily meals improves digestion, boosts immunity, and
-                    supports overall well-being. They help reduce the risk of lifestyle-related diseases and provide
-                    long-lasting energy. Home-made food prepared with fresh vegetables is light, nourishing, and
-                    suitable for all age groups.
-
-                    Fresh vegetables are the foundation of wholesome home-made food, making every meal nutritious,
-                    delicious, and made with care..</p>
-            </div>
-        </div>
-
-    </div>
 
 
 
 
-     <!-- Footer Start -->
+
+
+
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -266,7 +353,7 @@
                     </div>
                 </div>
 
-                 <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Serve Timing</h4>
                     <div class="timing">
                         <p><i class="fa fa-clock me-2 text-primary"></i><b>Breakfast</b> : 8:00 AM - 9:00 PM</p>
@@ -293,7 +380,7 @@
                     <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
                     <a class="btn btn-link" href="faq.html">FAQ's</a>
                 </div>
-               
+
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -321,7 +408,8 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
