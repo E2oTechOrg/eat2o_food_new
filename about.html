@@ -63,9 +63,9 @@
             color: #333;
         }
 
-        .dropdown-item:hover,
+        
         .dropdown-item:focus {
-            background-color: #f7e6dc;
+            background-color: white;
             /* highlight */
             color: #000;
         }
@@ -104,6 +104,12 @@
             right: 15px;
             top: 15px;
         }
+        .btn-close:focus,
+        .btn-close:focus-visible {
+            outline: none;
+            box-shadow: none;
+        }
+
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
@@ -127,8 +133,8 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+                <small><i class="fa fa-map-marker-alt me-2"></i>Madurai, Tamil Nadu, India</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>team@eat2o.in</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
@@ -154,7 +160,7 @@
                         <a href="#" class="nav-link dropdown-toggle fw-bold active" data-bs-toggle="dropdown">Who We
                             Are?</a>
                         <div class="dropdown-menu m-0">
-                            <a href="about.html" class="dropdown-item">About Us</a>
+                            <a href="about.html" class="dropdown-item active">About Us</a>
                             <a href="feature.html" class="dropdown-item">Our Features</a>
                             <a href="testimonial.html" class="dropdown-item">Customer Reviews</a>
                         </div>
@@ -300,23 +306,31 @@
                     <!-- LEFT IMAGE -->
                     <div class="col-lg-6 d-none d-lg-block">
                         <div class="popup-image">
-                            <img src="img/popup-image.webp" alt="Home Made Food">
+                            <img src="img/popup.webp" alt="Home Made Food">
                         </div>
                     </div>
 
                     <!-- RIGHT FORM -->
                     <div class="col-lg-6 col-12 p-5 popup-form">
-                        <form>
-                            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-                            <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
-                            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                         <form id="web3form" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
 
-                            <select class="form-select mb-4">
-                                <option selected>Select Your Area</option>
-                                <option>Madurai East</option>
-                                <option>Madurai West</option>
-                                <option>KK Nagar</option>
-                                <option>Anna Nagar</option>
+                            <input type="hidden" name="access_key" value="c041a084-5200-4222-9121-47a249f53a7f">
+
+                            <input type="text" class="form-control mb-3" name="name" placeholder="Your Name"
+                                autocomplete="off" required>
+
+                            <input type="tel" class="form-control mb-3" name="phone" placeholder="Your Phone Number"
+                                autocomplete="off" required>
+
+                            <input type="email" class="form-control mb-3" name="email" placeholder="Your Email"
+                                autocomplete="off" required>
+
+                            <select class="form-select mb-4" name="area" autocomplete="off" required>
+                                <option value="" selected disabled>Select Your Area</option>
+                                <option value="Madurai East">Madurai East</option>
+                                <option value="Madurai West">Madurai West</option>
+                                <option value="KK Nagar">KK Nagar</option>
+                                <option value="Anna Nagar">Anna Nagar</option>
                             </select>
 
                             <button type="submit" class="btn btn-success w-100 py-3 fw-bold">
@@ -327,6 +341,7 @@
                                 We never share your data
                             </p>
                         </form>
+
                     </div>
 
                 </div>
@@ -342,9 +357,9 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Madurai, Tamil Nadu, India</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 97345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>team@eat2o.in</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -395,8 +410,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        Made With <i class="fa fa-heart text-danger" aria-hidden="true"></i> By <a href="https://e2o.in">E2O Tech</a>
                     </div>
                 </div>
             </div>

@@ -65,13 +65,11 @@
         color: #333;
     }
 
-    .dropdown-item:hover,
-    .dropdown-item:focus {
-        background-color: #f7e6dc;
-        /* highlight */
-        color: #000;
-    }
-
+     .dropdown-item:focus {
+            background-color: white;
+            /* highlight */
+            color: #000;
+        }
     /* Popup Wrapper */
     .popup-wrapper {
         border-radius: 12px;
@@ -106,6 +104,12 @@
         right: 15px;
         top: 15px;
     }
+    .btn-close:focus,
+        .btn-close:focus-visible {
+            outline: none;
+            box-shadow: none;
+        }
+
 
     /* Mobile Adjustments */
     @media (max-width: 768px) {
@@ -133,8 +137,8 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+                <small><i class="fa fa-map-marker-alt me-2"></i>Madurai, Tamil Nadu, India</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>team@eat2o.in</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
@@ -213,30 +217,12 @@
             </div>
             <div class="row g-5 justify-content-center">
                 <div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-primary text-white d-flex flex-column justify-content-center h-100 p-5">
-                        <h5 class="text-white">Call Us</h5>
-                        <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <h5 class="text-white">Email Us</h5>
-                        <p class="mb-5"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <h5 class="text-white">Office Address</h5>
-                        <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <h5 class="text-white">Follow Us</h5>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                                    class="fab fa-youtube"></i></a>
-                            <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
+                    <div class="contact-image">
+                        <img src="img/contact.webp" alt="Contact Us" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4">Whether you’re looking for daily home-made meals, bulk orders, or special requests,
-                        our team is just a call or message away. Contact us today and enjoy the taste of real home
-                        cooking..</p>
+                   
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -271,7 +257,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-secondary rounded-pill py-3 px-5" type="submit">Send
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send
                                     Message</button>
                             </div>
                         </div>
@@ -284,7 +270,7 @@
 
 
     <!-- Google Map Start -->
-    <div class="container-xxl mb-4 px-0 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: -6px;">
+    <div class="container mb-4 px-0 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: -6px;">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.45687029956085!2d78.09894136745909!3d9.954686900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf4d60cee567%3A0xba5c062f82f6cd52!2sBest%20Track%20call%20taxi!5e1!3m2!1sen!2sin!4v1767701509318!5m2!1sen!2sin"
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -307,23 +293,31 @@
                     <!-- LEFT IMAGE -->
                     <div class="col-lg-6 d-none d-lg-block">
                         <div class="popup-image">
-                            <img src="img/popup-image.webp" alt="Home Made Food">
+                            <img src="img/popup.webp" alt="Home Made Food">
                         </div>
                     </div>
 
                     <!-- RIGHT FORM -->
                     <div class="col-lg-6 col-12 p-5 popup-form">
-                        <form>
-                            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-                            <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
-                            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                        <form id="web3form" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
 
-                            <select class="form-select mb-4">
-                                <option selected>Select Your Area</option>
-                                <option>Madurai East</option>
-                                <option>Madurai West</option>
-                                <option>KK Nagar</option>
-                                <option>Anna Nagar</option>
+                            <input type="hidden" name="access_key" value="c041a084-5200-4222-9121-47a249f53a7f">
+
+                            <input type="text" class="form-control mb-3" name="name" placeholder="Your Name"
+                                autocomplete="off" required>
+
+                            <input type="tel" class="form-control mb-3" name="phone" placeholder="Your Phone Number"
+                                autocomplete="off" required>
+
+                            <input type="email" class="form-control mb-3" name="email" placeholder="Your Email"
+                                autocomplete="off" required>
+
+                            <select class="form-select mb-4" name="area" autocomplete="off" required>
+                                <option value="" selected disabled>Select Your Area</option>
+                                <option value="Madurai East">Madurai East</option>
+                                <option value="Madurai West">Madurai West</option>
+                                <option value="KK Nagar">KK Nagar</option>
+                                <option value="Anna Nagar">Anna Nagar</option>
                             </select>
 
                             <button type="submit" class="btn btn-success w-100 py-3 fw-bold">
@@ -350,9 +344,9 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Madurai, Tamil Nadu, India</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 97345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>team@eat2o.in</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -403,8 +397,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        Made With <i class="fa fa-heart text-danger" aria-hidden="true"></i> By <a href="https://e2o.in">E2O Tech</a>
                     </div>
                 </div>
             </div>

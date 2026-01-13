@@ -34,7 +34,7 @@
         /* Make all carousel images same size */
         #header-carousel .carousel-item img {
             width: 100%;
-            height: 750px;
+            height: 800px;
             /* same height for all slides */
             object-fit: cover;
             /* prevents stretching */
@@ -63,9 +63,8 @@
             color: #333;
         }
 
-        .dropdown-item:hover,
         .dropdown-item:focus {
-            background-color: #f7e6dc;
+            background-color: white;
             /* highlight */
             color: #000;
         }
@@ -105,6 +104,13 @@
             top: 15px;
         }
 
+        .btn-close:focus,
+        .btn-close:focus-visible {
+            outline: none;
+            box-shadow: none;
+        }
+
+
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             .popup-form {
@@ -116,6 +122,8 @@
             max-width: 720px;
             /* medium size */
         }
+
+
     </style>
 </head>
 
@@ -132,8 +140,8 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>123 Streets, New York, USA</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+                <small><i class="fa fa-map-marker-alt me-2"></i>Madurai, Tamil Nadu, India</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>team@eat2o.in</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
@@ -203,23 +211,23 @@
                                 <div class="col-lg-7">
                                     <h1 class="display-2 mb-5 animated slideInDown" style="color:black">Traditional
                                         Taste Of Celebration</h1>
-                                    <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
-                                    <a href="" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
+                                    <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
+                                    <a href="service.html" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/hone-b2.webp" alt="Image">
+                    <img class="w-100" src="img/11.webp" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
-                                <div class="col-lg-7">
+                                <div class="col-lg-7 ">
                                     <h1 class="display-2 mb-5 animated slideInDown" style="color:black">Natural Food Is
                                         Always Healthy</h1>
-                                    <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
-                                    <a href="" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
+                                    <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
+                                    <a href="service.html" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
                                 </div>
                             </div>
                         </div>
@@ -767,23 +775,31 @@
                     <!-- LEFT IMAGE -->
                     <div class="col-lg-6 d-none d-lg-block">
                         <div class="popup-image">
-                            <img src="img/popup-image.webp" alt="Home Made Food">
+                            <img src="img/popup.webp" alt="Home Made Food">
                         </div>
                     </div>
 
                     <!-- RIGHT FORM -->
                     <div class="col-lg-6 col-12 p-5 popup-form">
-                        <form>
-                            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-                            <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
-                            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                        <form id="web3form" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
 
-                            <select class="form-select mb-4">
-                                <option selected>Select Your Area</option>
-                                <option>Madurai East</option>
-                                <option>Madurai West</option>
-                                <option>KK Nagar</option>
-                                <option>Anna Nagar</option>
+                            <input type="hidden" name="access_key" value="c041a084-5200-4222-9121-47a249f53a7f">
+
+                            <input type="text" class="form-control mb-3" name="name" placeholder="Your Name"
+                                autocomplete="off" required>
+
+                            <input type="tel" class="form-control mb-3" name="phone" placeholder="Your Phone Number"
+                                autocomplete="off" required>
+
+                            <input type="email" class="form-control mb-3" name="email" placeholder="Your Email"
+                                autocomplete="off" required>
+
+                            <select class="form-select mb-4" name="area" autocomplete="off" required>
+                                <option value="" selected disabled>Select Your Area</option>
+                                <option value="Madurai East">Madurai East</option>
+                                <option value="Madurai West">Madurai West</option>
+                                <option value="KK Nagar">KK Nagar</option>
+                                <option value="Anna Nagar">Anna Nagar</option>
                             </select>
 
                             <button type="submit" class="btn btn-success w-100 py-3 fw-bold">
@@ -794,6 +810,8 @@
                                 We never share your data
                             </p>
                         </form>
+
+
                     </div>
 
                 </div>
@@ -810,9 +828,9 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Madurai, Tamil Nadu, India</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 97345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>team@eat2o.in</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -825,7 +843,7 @@
                     </div>
                 </div>
 
-                 <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Serve Timing</h4>
                     <div class="timing">
                         <p><i class="fa fa-clock me-2 text-primary"></i><b>Breakfast</b> : 8:00 AM - 9:00 PM</p>
@@ -852,7 +870,7 @@
                     <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
                     <a class="btn btn-link" href="faq.html">FAQ's</a>
                 </div>
-               
+
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -863,8 +881,8 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        Made With <i class="fa fa-heart text-danger" aria-hidden="true"></i> By <a
+                            href="https://e2o.in">E2O Tech</a>
                     </div>
                 </div>
             </div>
@@ -896,6 +914,11 @@
 
         });
     </script>
+
+    
+
+
+
 
 
 </body>

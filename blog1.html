@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,52 +31,60 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-          .page-header {
-  position: relative;
-  width: 100%;
-  min-height: 420px;               /* desktop height */
-  display: flex;
-  align-items: center;
+        .page-header {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            /* desktop height */
+            display: flex;
+            align-items: center;
 
-background-image: url("img/20613.webp"); /* banner image */
-  background-size: cover;          /* 🔥 prevents breaking */
-  background-position: right center; /* keeps food on right */
-  background-repeat: no-repeat;
-  
-}
+            background-image: url("img/20613.webp");
+            /* banner image */
+            background-size: cover;
+            /* 🔥 prevents breaking */
+            background-position: right center;
+            /* keeps food on right */
+            background-repeat: no-repeat;
 
-@media (max-width: 768px) {
-  .page-header {
-    background-position: 80% center; /* shifts focus to food */
-    min-height: 300px;
-  }
-}
-        .blog .img-fluid{
-    height: 300px;
-    object-fit: cover;
-}
-.dropdown-item {
-  font-weight: 500;
- 
-  padding: 12px 20px;
-  color: #333;
-}
+        }
 
-.dropdown-item:hover,
-.dropdown-item:focus {
-  background-color: #f7e6dc;   /* highlight */
-  color: #000;
-}
-.subtitles{
-    border:none;
-    border-bottom: 2px solid red;
-    display:inline-block;
-}
+        @media (max-width: 768px) {
+            .page-header {
+                background-position: 80% center;
+                /* shifts focus to food */
+                min-height: 300px;
+            }
+        }
+
+        .blog .img-fluid {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .dropdown-item {
+            font-weight: 500;
+
+            padding: 12px 20px;
+            color: #333;
+        }
+
+        .dropdown-item:focus {
+            background-color: white;
+            /* highlight */
+            color: #000;
+        }
+
+        .subtitles {
+            border: none;
+            border-bottom: 2px solid red;
+            display: inline-block;
+        }
     </style>
 </head>
 
 <body>
-   <!-- Spinner Start -->
+    <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status"></div>
@@ -87,8 +96,8 @@ background-image: url("img/20613.webp"); /* banner image */
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+                <small><i class="fa fa-map-marker-alt me-2"></i>Madurai, Tamil Nadu, India</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>team@eat2o.in</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
@@ -103,13 +112,14 @@ background-image: url("img/20613.webp"); /* banner image */
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
                 <h1 class="fw-bold text-primary m-0">Eat<span class="text-secondary">2</span>O</h1>
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="index.html" class="nav-item nav-link fw-bold ">Home</a>
-                      <div class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Who We Are?</a>
                         <div class="dropdown-menu m-0">
                             <a href="about.html" class="dropdown-item">About Us</a>
@@ -117,7 +127,7 @@ background-image: url("img/20613.webp"); /* banner image */
                             <a href="testimonial.html" class="dropdown-item">Customer Reviews</a>
                         </div>
                     </div>
-                     <div class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle fw-bold" data-bs-toggle="dropdown">Pricing</a>
                         <div class="dropdown-menu m-0">
                             <a href="breakfast.html" class="dropdown-item">Break Fast Foods</a>
@@ -138,7 +148,7 @@ background-image: url("img/20613.webp"); /* banner image */
                     <a href="blog.html" class="nav-item nav-link fw-bold active">Blog</a>
                     <a href="contact.html" class="nav-item nav-link fw-bold">Contact Us</a>
                 </div>
-                
+
             </div>
         </nav>
     </div>
@@ -148,82 +158,106 @@ background-image: url("img/20613.webp"); /* banner image */
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
             <h1 class="display-3 mb-3 animated slideInDown">How to Prepare Healthy Home-Made Lunch for Everyday</h1>
-           
+
         </div>
     </div>
     <!-- Page Header End -->
 
-     <!-- blog image and contents -->
-       <div class="container-xxl py-5">
+    <!-- blog image and contents -->
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-start">
                 <div class="col-lg-6 order-last order-lg-first wow fadeIn " data-wow-delay="0.5">
                     <h2 class="mb-4 fw-bold ">Importance of Healthy Home-Made Lunch in Daily Life</h2>
-                    <p class="lead ">Preparing a healthy home-made lunch every day helps maintain energy levels, supports digestion, and encourages better eating habits. A well-planned lunch should include balanced portions of carbohydrates, proteins, vegetables, and healthy fats. Choosing fresh ingredients and simple cooking methods allows meals to remain nutritious while preserving natural flavors.
+                    <p class="lead ">Preparing a healthy home-made lunch every day helps maintain energy levels,
+                        supports digestion, and encourages better eating habits. A well-planned lunch should include
+                        balanced portions of carbohydrates, proteins, vegetables, and healthy fats. Choosing fresh
+                        ingredients and simple cooking methods allows meals to remain nutritious while preserving
+                        natural flavors.
 
-Traditional home cooking plays an important role in daily nutrition. Using freshly cooked rice, whole grains, seasonal vegetables, lentils, and mild spices ensures the body receives essential nutrients without excess oil or artificial additives. Cooking methods such as steaming, boiling, and light sautéing help retain nutritional value while keeping meals light and easy to digest.<p>
-                     
+                        Traditional home cooking plays an important role in daily nutrition. Using freshly cooked rice,
+                        whole grains, seasonal vegetables, lentils, and mild spices ensures the body receives essential
+                        nutrients without excess oil or artificial additives. Cooking methods such as steaming, boiling,
+                        and light sautéing help retain nutritional value while keeping meals light and easy to digest.
+                    <p>
+
                 </div>
                 <div class="col-lg-6 order-first order-lg-last wow fadeIn " data-wow-delay="0.1s">
                     <div class="nutrition-img ">
                         <img class="img-fluid w-100 rounded-3" src="img/Sapad.webp">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
     <div class="container-xxl py-3">
         <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2 >Choosing the Right Ingredients for a Healthy Lunch</h2>
+            <div class="subtitles mb-4">
+                <h2>Choosing the Right Ingredients for a Healthy Lunch</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">The foundation of a healthy home-made lunch starts with selecting fresh and nutritious
+                    ingredients. Using seasonal vegetables, whole grains, lentils, and natural spices helps ensure meals
+                    are rich in essential nutrients. Fresh ingredients not only improve taste but also support better
+                    digestion and overall health. Avoiding processed foods and artificial additives makes everyday
+                    lunches lighter and more beneficial for the body.</p>
+            </div>
         </div>
-        <div class="subpara">
-            <p class="lead">The foundation of a healthy home-made lunch starts with selecting fresh and nutritious ingredients. Using seasonal vegetables, whole grains, lentils, and natural spices helps ensure meals are rich in essential nutrients. Fresh ingredients not only improve taste but also support better digestion and overall health. Avoiding processed foods and artificial additives makes everyday lunches lighter and more beneficial for the body.</p>
+
+        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="subtitles mb-4">
+                <h2>Planning Balanced Meals for Daily Nutrition</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">A balanced lunch includes the right combination of carbohydrates, proteins, healthy
+                    fats, and fiber. Traditional home cooking naturally follows this balance by pairing rice or grains
+                    with vegetables, legumes, and light gravies. Proper meal planning helps maintain energy levels
+                    throughout the day and prevents overeating. Balanced meals also support metabolism and long-term
+                    wellness when followed consistently.</p>
+            </div>
         </div>
+
+        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="subtitles mb-4">
+                <h2>Healthy Cooking Methods for Everyday Meals</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">Cooking methods play an important role in preserving nutritional value. Techniques such
+                    as steaming, boiling, pressure cooking, and light sautéing help retain vitamins and minerals while
+                    reducing the need for excess oil. Traditional cooking practices focus on slow preparation and
+                    moderate seasoning, which enhances flavor without compromising health. Using minimal oil and fresh
+                    spices keeps meals wholesome and easy to digest.</p>
+            </div>
+        </div>
+
+        <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="subtitles mb-4">
+                <h2>Making Healthy Lunch Preparation a Daily Habit</h2>
+            </div>
+            <div class="subpara">
+                <p class="lead">Consistency is key when preparing healthy home-made lunches every day. Planning meals in
+                    advance, preparing ingredients ahead of time, and rotating dishes throughout the week can make
+                    cooking easier and more enjoyable. Homemade lunches also allow better control over portion sizes and
+                    ingredients, making them suitable for all age groups. Over time, these habits support a healthier
+                    lifestyle and improve overall well-being.</p>
+            </div>
+        </div>
+
     </div>
 
-     <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2>Planning Balanced Meals for Daily Nutrition</h2>
-        </div>
-        <div class="subpara">
-            <p class="lead">A balanced lunch includes the right combination of carbohydrates, proteins, healthy fats, and fiber. Traditional home cooking naturally follows this balance by pairing rice or grains with vegetables, legumes, and light gravies. Proper meal planning helps maintain energy levels throughout the day and prevents overeating. Balanced meals also support metabolism and long-term wellness when followed consistently.</p>
-        </div>
-    </div>
-
-     <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2>Healthy Cooking Methods for Everyday Meals</h2>
-        </div>
-        <div class="subpara">
-            <p class="lead">Cooking methods play an important role in preserving nutritional value. Techniques such as steaming, boiling, pressure cooking, and light sautéing help retain vitamins and minerals while reducing the need for excess oil. Traditional cooking practices focus on slow preparation and moderate seasoning, which enhances flavor without compromising health. Using minimal oil and fresh spices keeps meals wholesome and easy to digest.</p>
-        </div>
-    </div>
-
-    <div class="contentblog mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="subtitles mb-4">
-            <h2>Making Healthy Lunch Preparation a Daily Habit</h2>
-        </div>
-        <div class="subpara">
-            <p class="lead">Consistency is key when preparing healthy home-made lunches every day. Planning meals in advance, preparing ingredients ahead of time, and rotating dishes throughout the week can make cooking easier and more enjoyable. Homemade lunches also allow better control over portion sizes and ingredients, making them suitable for all age groups. Over time, these habits support a healthier lifestyle and improve overall well-being.</p>
-        </div>
-    </div>
-        
-    </div>
 
 
-  
 
-     <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">Eat<span class="text-secondary">2</span>O</h1>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Madurai, Tamil Nadu, India</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 97345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>team@eat2o.in</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -236,7 +270,7 @@ Traditional home cooking plays an important role in daily nutrition. Using fresh
                     </div>
                 </div>
 
-                 <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Serve Timing</h4>
                     <div class="timing">
                         <p><i class="fa fa-clock me-2 text-primary"></i><b>Breakfast</b> : 8:00 AM - 9:00 PM</p>
@@ -263,7 +297,7 @@ Traditional home cooking plays an important role in daily nutrition. Using fresh
                     <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
                     <a class="btn btn-link" href="faq.html">FAQ's</a>
                 </div>
-               
+
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -274,8 +308,8 @@ Traditional home cooking plays an important role in daily nutrition. Using fresh
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        Made With <i class="fa fa-heart text-danger" aria-hidden="true"></i> By <a
+                            href="https://e2o.in">E2O Tech</a>
                     </div>
                 </div>
             </div>
@@ -284,7 +318,8 @@ Traditional home cooking plays an important role in daily nutrition. Using fresh
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
