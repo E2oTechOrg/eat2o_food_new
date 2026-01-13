@@ -65,11 +65,12 @@
         color: #333;
     }
 
-     .dropdown-item:focus {
-            background-color: white;
-            /* highlight */
-            color: #000;
-        }
+    .dropdown-item:focus {
+        background-color: white;
+        /* highlight */
+        color: #000;
+    }
+
     /* Popup Wrapper */
     .popup-wrapper {
         border-radius: 12px;
@@ -104,11 +105,12 @@
         right: 15px;
         top: 15px;
     }
+
     .btn-close:focus,
-        .btn-close:focus-visible {
-            outline: none;
-            box-shadow: none;
-        }
+    .btn-close:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
 
 
     /* Mobile Adjustments */
@@ -169,9 +171,8 @@
                         </div>
                     </div>
 
-                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle fw-bold "
-                            data-bs-toggle="dropdown">Pricing</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fw-bold " data-bs-toggle="dropdown">Pricing</a>
                         <div class="dropdown-menu m-0">
                             <a href="breakfast.html" class="dropdown-item">Break Fast Foods</a>
                             <a href="lunch.html" class="dropdown-item">Lunch box Foods</a>
@@ -191,7 +192,7 @@
                     <a href="blog.html" class="nav-item nav-link fw-bold">Blog</a>
                     <a href="contact.html" class="nav-item nav-link fw-bold active">Contact Us</a>
                 </div>
-                
+
             </div>
         </nav>
     </div>
@@ -222,37 +223,42 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                   
-                    <form>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+                        <input type="hidden" name="access_key" value="c041a084-5200-4222-9121-47a249f53a7f">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="phoneno" placeholder="Your Mobile Number">
-                                    <label for="email">Your Mobile Number</label>
+                                    <input type="tel" class="form-control" id="phoneno" name="phoneno"
+                                        placeholder="Your Mobile Number" required>
+                                    <label for="phoneno">Your Mobile Number</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" name="user_subject"
+                                        placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 200px"></textarea>
+                                    <textarea class="form-control" name="message" placeholder="Leave a message here"
+                                        id="message" style="height: 200px" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -271,11 +277,18 @@
 
     <!-- Google Map Start -->
     <div class="container mb-4 px-0 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: -6px;">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.45687029956085!2d78.09894136745909!3d9.954686900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf4d60cee567%3A0xba5c062f82f6cd52!2sBest%20Track%20call%20taxi!5e1!3m2!1sen!2sin!4v1767701509318!5m2!1sen!2sin"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <div class="map-header mb-4 text-center">
+            <h1 class="display-5 animated slideInDown mb-3">Our Location</h1>
+            <p class="lead">Find Us Here</p>
+
+        </div>
+        <div class="map-container shadow p-5 rounded-3">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.3472319046746!2d78.08568502479295!3d9.95142589015151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f4731bef56d1115%3A0xa900e8ee9ae749bf!2sE2o%20Technologies%20Private%20Limited!5e1!3m2!1sen!2sin!4v1768307399469!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </div>
     <!-- Google Map End -->
 
@@ -338,7 +351,7 @@
 
 
 
-     <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -359,7 +372,7 @@
                     </div>
                 </div>
 
-                 <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Serve Timing</h4>
                     <div class="timing">
                         <p><i class="fa fa-clock me-2 text-primary"></i><b>Breakfast</b> : 8:00 AM - 9:00 PM</p>
@@ -386,7 +399,7 @@
                     <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
                     <a class="btn btn-link" href="faq.html">FAQ's</a>
                 </div>
-               
+
             </div>
         </div>
         <div class="container-fluid copyright">
@@ -397,7 +410,8 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Made With <i class="fa fa-heart text-danger" aria-hidden="true"></i> By <a href="https://e2o.in">E2O Tech</a>
+                        Made With <i class="fa fa-heart text-danger" aria-hidden="true"></i> By <a
+                            href="https://e2o.in">E2O Tech</a>
                     </div>
                 </div>
             </div>
